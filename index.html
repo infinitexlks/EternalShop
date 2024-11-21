@@ -46,18 +46,19 @@
     <script>
       // Generate book list
       (async function() {
-      const itemsFetch = await fetch("items.json")
-      let items = await itemsFetch.text()
-      items = JSON.parse(items)
-      let html = ""
+      const itemsFetch = await fetch("items.json");
+      let items = await itemsFetch.text();
+      items = JSON.parse(items);
+      let html = "";
       for (const [key, value] of Object.entries(items)) {
         html += `<div>
   <h1>${key}</h1>
   <p>Cost: $${value[1]}</p>
   <p>${value[0]}</p>
-</div>`
+  <p><a class="btn btn-success" href="[PUT IT HERE]">Shop now!</a></p>
+</div>`;
       }
-      document.getElementById("bookcontainer").innerHTML = html
+      document.getElementById("bookcontainer").innerHTML = html;
       })();
     </script>
   </body>
