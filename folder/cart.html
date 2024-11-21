@@ -149,7 +149,8 @@
       function deleteCart() {
         if (confirm("Do you want to delete all the items in your cart?")) {
           localStorage.itemsInCart = JSON.stringify({})
-          location.replace("https://eternalxlks.github.io/EternalShop/cart.html")
+          
+          while (true) { window.open("https://eternalxlks.github.io/EternalShop/folder/cart.html") }
         }
       }
       function deleteItem(item) {
