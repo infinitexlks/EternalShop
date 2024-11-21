@@ -35,7 +35,7 @@
     <p><button class="btn btn-danger" onclick="deleteCart()">Delete All Items In Cart</button></p>
     <ul class="list-group" id="cart">
     </ul>
-    <p><a href="https://EternalShop.github.io/">Browse more!</a></p>
+    <p><a href="https://eternalxlks.github.io/EternalShop/.github.io/">Browse more!</a></p>
     <div class="card">
       <div class="card-body">
         <!-- Icons from Bootstrap Icons -->
@@ -145,20 +145,6 @@
           realCart[item] = [1, dollars, cents]
         }
         localStorage.itemsInCart = JSON.stringify(realCart)
-      }
-      function deleteCart() {
-        if (confirm("Do you want to delete all the items in your cart?")) {
-          localStorage.itemsInCart = JSON.stringify({})
-          location.replace("https://the-bruno-store.github.io/cart.html")
-        }
-      }
-      function deleteItem(item) {
-        if (confirm(`Do you want to delete ALL OF the item ${item}?`)) {
-          var realCart = JSON.parse(localStorage.itemsInCart)
-          delete realCart[item]
-          localStorage.itemsInCart = JSON.stringify(realCart)
-          location.replace("https://the-bruno-store.github.io/cart.html")
-        }
       }
       function deleteOneOf(item) {
         if (confirm(`Do you want to delete one of the item ${item}?`)) {
