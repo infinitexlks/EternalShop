@@ -49,17 +49,12 @@
       let items = await itemsFetch.text()
       items = JSON.parse(items)
       let html = ""
-      for (const book in items) {
-        html += `<h2>${book}</h2>
-        <p>${items[book][0]}</p>
-        <p>Cost: $${items[book][1]}.`
-        // Format cents. This is why I seperated the dollars and cents to two values.
-        var cost = items[book][2]
-        if (cost < 10 && cost > -1) {
-          cost = cost.toString()
-          cost = "0" + cost
-        }
-        html += `${cost}</p><p><a href="${items[book][3]}">Buy now!</a></p>`
+      for (const [key, value] of Object.entries(item)) {
+        html += `<div>
+  <h1>${key}</h1>
+  <p>Cost: $${value[1]}</p>
+  <p>${value[0]}</p>
+</div>`
       }
       document.getElementById("bookcontainer").innerHTML = html
     </script>
