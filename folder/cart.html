@@ -155,9 +155,7 @@
         if (confirm(`Do you want to delete ALL OF the item ${item}?`)) {
           var realCart = JSON.parse(localStorage.itemsInCart)
           delete realCart[item]
-          
-          localStorage.itemsInCart = JSON.stringify(realCart)
-          location.replace("https://eternalxlks.github.io/EternalShop/cart.html")
+      
         }
       }
       function deleteOneOf(item) {
@@ -176,8 +174,6 @@
             }
             realCart[item][2] = total
           }
-          localStorage.itemsInCart = JSON.stringify(realCart)
-          location.replace("https://eternalxlks.github.io/EternalShop/")
         }
       }
     </script>
