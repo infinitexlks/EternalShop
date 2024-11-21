@@ -49,7 +49,7 @@
       let items = await itemsFetch.text()
       items = JSON.parse(items)
       let html = ""
-      for (const [key, value] of Object.entries(item)) {
+      for (const [key, value] of Object.entries(items)) {
         html += `<div>
   <h1>${key}</h1>
   <p>Cost: $${value[1]}</p>
