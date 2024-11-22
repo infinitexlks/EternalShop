@@ -149,7 +149,7 @@
       function deleteCart() {
         if (confirm("Do you want to delete all the items in your cart?")) {
           localStorage.itemsInCart = JSON.stringify({})
-          location.replace("https://eternalxlks.github.io/eternalshop/folder/cart.html")
+          location.replace("https://eternalxlks.github.io/EternalShop/")
         }
       }
       function deleteItem(item) {
@@ -157,7 +157,7 @@
           var realCart = JSON.parse(localStorage.itemsInCart)
           delete realCart[item]
           localStorage.itemsInCart = JSON.stringify(realCart)
-          location.replace("https://eternalxlks.github.io/eternalshop/folder/cart.html")
+          location.replace("https://eternalxlks.github.io/EternalShop/")
         }
       }
       function deleteOneOf(item) {
@@ -177,7 +177,7 @@
             realCart[item][2] = total
           }
           localStorage.itemsInCart = JSON.stringify(realCart)
-          location.replace("https://eternalxlks.github.io/eternalshop/folder/cart.html")
+          location.replace("https://eternalxlks.github.io/EternalShop/")
         }
       }
     </script>
