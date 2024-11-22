@@ -162,7 +162,6 @@
         if (confirm(`Do you want to delete one of the item ${item}?`)) {
           var realCart = JSON.parse(localStorage.itemsInCart)
           if (realCart[item][0] == 1) {
-            realCart[item] = function loophole() {}
           } else {
             let moneyCalc = (realCart[item][1] * 100 + realCart[item][2]) / realCart[item][0]
             realCart[item][0] -= 1
